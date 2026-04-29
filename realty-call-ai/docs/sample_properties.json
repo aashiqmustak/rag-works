@@ -1,0 +1,102 @@
+[
+  {
+    "id": "prop-001",
+    "title": "Modern Downtown Apartment",
+    "description": "Luxury 2-bedroom apartment with panoramic city views, premium finishes, and smart home features",
+    "price": 450000,
+    "property_type": "apartment",
+    "location": "Downtown District",
+    "coordinates": {
+      "lat": 40.7128,
+      "lng": -74.0060
+    },
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "area_sqft": 1200,
+    "amenities": ["parking", "gym", "pool", "concierge", "24/7 security", "smart home"],
+    "images": ["img1.jpg", "img2.jpg"],
+    "availability": true,
+    "agent_name": "Jane Smith",
+    "agent_phone": "+1-555-0101"
+  },
+  {
+    "id": "prop-002",
+    "title": "Spacious Family Villa",
+    "description": "5-bedroom villa with garden, pool, and proximity to top-rated schools",
+    "price": 850000,
+    "property_type": "villa",
+    "location": "Suburb Heights",
+    "coordinates": {
+      "lat": 40.7580,
+      "lng": -73.9855
+    },
+    "bedrooms": 5,
+    "bathrooms": 3,
+    "area_sqft": 3500,
+    "amenities": ["garden", "pool", "garage", "tennis court", "security system"],
+    "images": ["villa1.jpg", "villa2.jpg"],
+    "availability": true,
+    "agent_name": "Robert Johnson",
+    "agent_phone": "+1-555-0102"
+  },
+  {
+    "id": "prop-003",
+    "title": "Cozy Studio",
+    "description": "Perfect starter property, fully furnished with modern amenities",
+    "price": 180000,
+    "property_type": "apartment",
+    "location": "Midtown",
+    "coordinates": {
+      "lat": 40.7505,
+      "lng": -73.9972
+    },
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "area_sqft": 650,
+    "amenities": ["furnished", "laundry", "utilities included", "wifi"],
+    "images": ["studio1.jpg"],
+    "availability": true,
+    "agent_name": "Sarah Williams",
+    "agent_phone": "+1-555-0103"
+  },
+  {
+    "id": "prop-004",
+    "title": "Commercial Office Space",
+    "description": "Prime location office with conference rooms and parking",
+    "price": 1200000,
+    "property_type": "commercial",
+    "location": "Business District",
+    "coordinates": {
+      "lat": 40.7489,
+      "lng": -73.9680
+    },
+    "bedrooms": 0,
+    "bathrooms": 2,
+    "area_sqft": 5000,
+    "amenities": ["parking", "conference room", "security", "24/7 access", "elevator"],
+    "images": ["office1.jpg"],
+    "availability": true,
+    "agent_name": "Michael Brown",
+    "agent_phone": "+1-555-0104"
+  },
+  {
+    "id": "prop-005",
+    "title": "Waterfront House",
+    "description": "3-bedroom house with direct beach access and stunning ocean views",
+    "price": 1050000,
+    "property_type": "house",
+    "location": "Coastal Area",
+    "coordinates": {
+      "lat": 40.6892,
+      "lng": -74.0445
+    },
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "area_sqft": 2200,
+    "amenities": ["beach access", "deck", "fireplace", "garage", "water view"],
+    "images": ["beach1.jpg", "beach2.jpg"],
+    "availability": true,
+    "agent_name": "Emily Davis",
+    "agent_phone": "+1-555-0105"
+  }
+]

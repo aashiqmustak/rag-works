@@ -1,0 +1,81 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=False
+      - LOG_LEVEL=INFO
+      - DATABASE_URL=sqlite:///./realtydb.db
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - SARVAM_API_KEY=${SARVAM_API_KEY}
+      - PIPECAT_WORKSPACE_ID=${PIPECAT_WORKSPACE_ID}
+      - PIPECAT_API_KEY=${PIPECAT_API_KEY}
+    volumes:
+      - ./backend:/app
+      - ./data:/app/data
+      - ./logs:/app/logs
+    depends_on:
+      - postgres
+    networks:
+      - realty-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://backend:8000
+    depends_on:
+      - backend
+    networks:
+      - realty-network
+
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_DB=realty_db
+      - POSTGRES_USER=realty_user
+      - POSTGRES_PASSWORD=secure_password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - realty-network
+
+  mcp_crm:
+    image: realty-mcp-crm:latest  # Replace with actual MCP image
+    ports:
+      - "8001:8000"
+    environment:
+      - DATABASE_URL=postgresql://realty_user:secure_password@postgres/realty_db
+    depends_on:
+      - postgres
+    networks:
+      - realty-network
+
+  mcp_calendar:
+    image: realty-mcp-calendar:latest  # Replace with actual MCP image
+    ports:
+      - "8002:8000"
+    networks:
+      - realty-network
+
+  mcp_gmail:
+    image: realty-mcp-gmail:latest  # Replace with actual MCP image
+    ports:
+      - "8003:8000"
+    networks:
+      - realty-network
+
+volumes:
+  postgres_data:
+
+networks:
+  realty-network:
+    driver: bridge

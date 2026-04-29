@@ -1,0 +1,20 @@
+"""
+Prompts package initialization
+"""
+from .agent_prompts import (
+    SUPERVISOR_SYSTEM_PROMPT,
+    RAG_AGENT_PROMPT,
+    LEAD_INTELLIGENCE_PROMPT,
+    CRM_AGENT_PROMPT,
+    CALENDAR_AGENT_PROMPT,
+    EMAIL_AGENT_PROMPT
+)
+
+__all__ = [
+    "SUPERVISOR_SYSTEM_PROMPT",
+    "RAG_AGENT_PROMPT",
+    "LEAD_INTELLIGENCE_PROMPT",
+    "CRM_AGENT_PROMPT",
+    "CALENDAR_AGENT_PROMPT",
+    "EMAIL_AGENT_PROMPT"
+]
