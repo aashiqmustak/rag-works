@@ -1,4 +1,4 @@
-# Real Estate Business - Lead Agent
+# Real Estate Lead Agent
 
 AI-powered real estate sales call intelligence platform that automates outbound property sales conversations using voice AI, RAG, MCP integrations, and multi-agent workflows.
 
@@ -17,7 +17,9 @@ The platform supports both voice calls and chat-based interactions to help real 
 - Lead qualification
 - Objection handling
 - Follow-up generation
-- MCP-based CRM integrations
+- CRM integration using MCP
+- Calendar scheduling using MCP
+- Gmail integration using MCP
 - Multilingual-ready architecture
 
 ---
@@ -29,14 +31,23 @@ The platform supports both voice calls and chat-based interactions to help real 
 | Backend | FastAPI |
 | Language | Python |
 | Voice Pipeline | Pipecat |
-|Agent|  Agno |
 | Speech-to-Text | Whisper |
 | Text-to-Speech | Piper |
 | LLM | Groq |
 | Vector Search | FAISS |
-| RAG Pipeline | Custom Python |
+| RAG Pipeline | Agno |
 | MCP Integration | MCP Servers |
-| Database | PostgreSQL (planned) |
+| Database | PostgreSQL |
+
+---
+
+# MCP Integrations
+
+| MCP Server | Purpose |
+|---|---|
+| CRM MCP | Manage leads, follow-ups, customer notes, and sales stages |
+| Calendar MCP | Schedule site visits, broker meetings, and callbacks |
+| Gmail MCP | Send follow-up emails, brochures, and meeting confirmations |
 
 ---
 
@@ -49,16 +60,16 @@ FastAPI Backend
         ↓
 Pipecat Voice Pipeline
         ↓
-STT 
+STT (Sarvam)
         ↓
 Supervisor Agent
-   ↙        ↘
-RAG Agent   CRM Agent
+   ↙        ↓        ↘
+RAG Agent  CRM Agent  Email Agent
+   ↓            ↓            ↓
+FAISS      CRM MCP    Gmail MCP
    ↓            ↓
-FAISS       MCP Servers
+LLM      Calendar MCP
    ↓
-LLM 
-   ↓
-TTS 
+TTS (Sarvam)
    ↓
 Response to User
