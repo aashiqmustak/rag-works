@@ -1,6 +1,6 @@
-# RealtyCall AI
+# Real Estate Business - Lead Agent
 
-RealtyCall AI is an AI-powered real estate sales call intelligence platform that automates outbound property sales conversations using voice AI, RAG, MCP integrations, and multi-agent workflows.
+AI-powered real estate sales call intelligence platform that automates outbound property sales conversations using voice AI, RAG, MCP integrations, and multi-agent workflows.
 
 The platform supports both voice calls and chat-based interactions to help real estate businesses qualify leads, recommend properties, handle objections, generate follow-ups, and improve sales conversion rates.
 
@@ -29,7 +29,7 @@ The platform supports both voice calls and chat-based interactions to help real 
 | Backend | FastAPI |
 | Language | Python |
 | Voice Pipeline | Pipecat |
-|Agent| | Agno |
+|Agent|  Agno |
 | Speech-to-Text | Whisper |
 | Text-to-Speech | Piper |
 | LLM | Groq |
